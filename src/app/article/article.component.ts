@@ -4,14 +4,14 @@ import gql from 'graphql-tag';
 import ARTICLE_QUERY from '../apollo/queries/article';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { env } from 'node:process'
+import { environment } from '../../environments/environment'
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent implements OnInit {
-  envURL: any = env.strapiURL;
+  envURL: any = environment.strapiURL;
   data: any = {};
   loading = true;
   errors: any;

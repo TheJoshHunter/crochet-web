@@ -3,7 +3,7 @@ import { Apollo } from "apollo-angular";
 import gql from "graphql-tag";
 import ARTICLES_QUERY from "../apollo/queries/articles";
 import { Subscription } from "rxjs";
-import { env } from 'node:process';
+import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'app-articles',
@@ -11,7 +11,7 @@ import { env } from 'node:process';
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
-  envURL: any = env.strapiURL;
+  envURL: any = environment.strapiURL;
   data: any = {};
   loading = true;
   errors: any;
