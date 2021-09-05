@@ -9,7 +9,6 @@ import { NavComponent } from "./nav/nav.component";
 import { ArticlesComponent } from "./articles/articles.component"
 import { ArticleComponent } from "./article/article.component"
 import { CategoryComponent } from "./category/category.component";
-import { MarkdownModule } from "ngx-markdown";
 import { NotFoundComponent } from './notfound/notfound.component';
 
 // const appRoutes: Routes = [
@@ -29,7 +28,6 @@ import { NotFoundComponent } from './notfound/notfound.component';
     NotFoundComponent
   ],
   imports: [
-    MarkdownModule.forRoot(),
     // RouterModule.forRoot(appRoutes, {enableTracing: true}),
     BrowserModule,
     AppRoutingModule,
