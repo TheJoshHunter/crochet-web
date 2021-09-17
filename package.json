@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-patch": "npm --no-git-tag-version version patch && ng build --configuration production",
+    "build-minor": "npm --no-git-tag-version version minor && ng build --configuration production",
+    "build-major": "npm --no-git-tag-version version major && ng build --configuration production",
+    "build-prerelease": "npm --no-git-tag-version version prerelease && ng build --configuration production",
+    "heroku-postinstall": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +25,12 @@
     "@angular/platform-browser-dynamic": "~12.2.4",
     "@angular/router": "~12.2.4",
     "@apollo/client": "^3.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "apollo-angular": "^2.4.0",
+    "bootstrap": "^5.1.1",
+    "express": "^4.17.1",
     "graphql": "^15.0.0",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "uikit": "^3.6.20",
@@ -31,6 +40,7 @@
     "@angular-devkit/build-angular": "~12.2.4",
     "@angular/cli": "~12.2.4",
     "@angular/compiler-cli": "~12.2.4",
+    "@angular/localize": "^12.2.4",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
@@ -42,8 +52,13 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
+    "replace-in-file": "^6.2.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.3.5"
+  },
+  "engines": {
+    "node": "14.16.0",
+    "npm": "7.11.1"
   }
 }

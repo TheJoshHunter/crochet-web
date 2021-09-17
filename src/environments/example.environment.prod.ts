@@ -2,6 +2,7 @@
 
 export const environment = {
     production: true,
-    strapiURL: "" // Strapi URL goes here 
+    strapiURL: "", // Strapi URL goes here 
+    version: '{BUILD_VERSION}'
   };
   
