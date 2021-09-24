@@ -1,5 +1,5 @@
-import { Cookbook } from "./cookbook.model";
-import { Recipe } from "./recipe.model";
+import { Cookbook } from './cookbook.model';
+import { Recipe } from './recipe.model';
 
 export class Author {
     apiID?: string;

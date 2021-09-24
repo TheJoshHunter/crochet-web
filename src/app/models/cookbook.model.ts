@@ -1,6 +1,6 @@
-import { Author } from "./author.model";
-import { Chapter } from "./chapter.model";
-import { Recipe } from "./recipe.model";
+import { Author } from './author.model';
+import { Chapter } from './chapter.model';
+import { Recipe } from './recipe.model';
 
 export class Cookbook {
     apiID?: string;
@@ -13,5 +13,5 @@ export class Cookbook {
     creationDate?: Date;
     publishDate?: Date;
     modifedDate?: Date;
-    
+
 }

@@ -6,6 +6,6 @@ export class Ingredient {
     constructor() {
         this.quantity = 0;
         this.unit = 'kg';
-        this.item = 'NOT_ASSIGNED'
+        this.item = 'NOT_ASSIGNED';
     }
 }

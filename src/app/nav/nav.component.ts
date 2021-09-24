@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo } from "apollo-angular";
-import gql from "graphql-tag";
-import CATEGORIES_QUERY from "../apollo/queries/categories";
-import { Subscription } from "rxjs";
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
+import CATEGORIES_QUERY from '../apollo/queries/categories';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav',

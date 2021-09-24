@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo } from "apollo-angular";
-import gql from "graphql-tag";
-import CATEGORY_ARTICLES_QUERY from "../apollo/queries/category";
-import { ActivatedRoute, ParamMap } from "@angular/router";
-import { Subscription } from "rxjs";
-import { environment } from '../../environments/environment'
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
+import CATEGORY_ARTICLES_QUERY from '../apollo/queries/category';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-category',
@@ -28,7 +28,7 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      this.id = params.get("id");
+      this.id = params.get('id');
       this.queryCategoriesArticles = this.apollo
       .watchQuery({
         query: CATEGORY_ARTICLES_QUERY,

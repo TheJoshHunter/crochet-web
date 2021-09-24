@@ -4,7 +4,7 @@ import gql from 'graphql-tag';
 import ARTICLE_QUERY from '../apollo/queries/article';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
