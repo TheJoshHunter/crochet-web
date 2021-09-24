@@ -1,4 +1,9 @@
+// This isint used any more
+// TODO: REMOVE THIS
+
+
 var replace = require('replace-in-file');
+const { ModuleResolutionKind } = require('typescript')
 var package = require('./package.json');
 var buildVersion = package.version;
 const options = {
