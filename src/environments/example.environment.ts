@@ -6,7 +6,7 @@
 
 export const environment = {
     production: false,
-    strapiURL: "http://localhost:1337",
+    apiURL: "http://localhost:1337",
     version: '{BUILD_VERSION}',
     timestamp: '',
 
